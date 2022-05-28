@@ -6,6 +6,7 @@ import { WorkDone } from "./WorkDone";
 import { Area } from "./Area";
 import { TravelCost } from "./TravelCost";
 import { TilesBox } from "./TilesBox";
+import { Boggie } from "./Boggie";
 
 export const ContainerManager = () => {
   const [val, setVal] = useState("mult");
@@ -18,6 +19,7 @@ export const ContainerManager = () => {
         <Tab value="Area" label="Area of rec" />
         <Tab value="travelcost" label="Travel Cost" />
         <Tab value="tiles" label="Tiles boxes" />
+        <Tab value="boggie" label="Boggie" />
       </Tabs>
       {val === "mult" && <Multi />}
       {val === "add" && <Add />}
@@ -25,6 +27,7 @@ export const ContainerManager = () => {
       {val === "Area" && <Area />}
       {val === "travelcost" && <TravelCost />}
       {val === "tiles" && <TilesBox />}
+      {val === "boggie" && <Boggie />}
     </div>
   );
 };
