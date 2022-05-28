@@ -3,6 +3,7 @@ import { Tabs, Tab } from "@mui/material";
 import { Add } from "./Add";
 import { Multi } from "./Multi";
 import { WorkDone } from "./WorkDone";
+import { Area } from "./Area";
 
 export const ContainerManager = () => {
   const [val, setVal] = useState("mult");
@@ -13,11 +14,13 @@ export const ContainerManager = () => {
         <Tab value="mult" label="Multiply" />
         <Tab value="even" label="Even Odd" />
         <Tab value="wd" label="Work Done" />
+        <Tab value="Area" label="Area of rec" />
       </Tabs>
       {val === "mult" && <Multi />}
       {val === "add" && <Add />}
       {val === "even" && <h3>This is my PDAC course - Even Odd App</h3>}
       {val === "wd" && <WorkDone />}
+      {val === "Area" && <Area />}
     </div>
   );
 };
