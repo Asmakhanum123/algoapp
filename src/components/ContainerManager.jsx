@@ -4,6 +4,8 @@ import { Add } from "./Add";
 import { Multi } from "./Multi";
 import { WorkDone } from "./WorkDone";
 import { Area } from "./Area";
+import { TravelCost } from "./TravelCost";
+import { TilesBox } from "./TilesBox";
 
 export const ContainerManager = () => {
   const [val, setVal] = useState("mult");
@@ -12,15 +14,17 @@ export const ContainerManager = () => {
       <Tabs value={val} onChange={(e, value) => setVal(value)}>
         <Tab value="add" label="Add" />
         <Tab value="mult" label="Multiply" />
-        <Tab value="even" label="Even Odd" />
         <Tab value="wd" label="Work Done" />
         <Tab value="Area" label="Area of rec" />
+        <Tab value="travelcost" label="Travel Cost" />
+        <Tab value="tiles" label="Tiles boxes" />
       </Tabs>
       {val === "mult" && <Multi />}
       {val === "add" && <Add />}
-      {val === "even" && <h3>This is my PDAC course - Even Odd App</h3>}
       {val === "wd" && <WorkDone />}
       {val === "Area" && <Area />}
+      {val === "travelcost" && <TravelCost />}
+      {val === "tiles" && <TilesBox />}
     </div>
   );
 };
